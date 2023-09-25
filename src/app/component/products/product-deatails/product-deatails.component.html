@@ -1,0 +1,25 @@
+<div class="text-center text-light sec-gap mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto py-5">
+                <div class="card py-5 shadow-lg bg-dark text-light">
+                    <h1>Product Id: <span class="text-warning">{{ productId }}</span></h1>
+                    <h4>Product Details: <span class="text-warning">{{ product.productName | uppercase }}</span></h4>
+                    <h5>Product Price: <span class="text-warning"> {{ product.price | currency: 'EGP' }}</span></h5>
+                    <p>Product Quantity: <span class="text-warning">{{ product.quantity }}</span></p>
+                    <div>
+                        <i class="fa-solid fa-star fs-5 text-warning"></i>
+                        <i class="fa-solid fa-star fs-5 text-warning"></i>
+                        <i class="fa-solid fa-star fs-5 text-warning"></i>
+                        <i class="fa-solid fa-star fs-5 text-warning"></i>
+                        <i class="fa-solid fa-star fs-5 text-warning"></i>
+                    </div>
+                    <div class="div text-center mt-4">
+                        <button [routerLink]="['/products']" class="btn btn-outline-info">Back To Products</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

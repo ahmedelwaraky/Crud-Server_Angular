@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container">
+        <a class="navbar-brand" routerLink="home">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="bg-dark text-light rounded-5" [routerLink]="['/home']" [routerLinkActiveOptions]="{exact : true}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="bg-dark text-light rounded-5" [routerLink]="['/about']" [routerLinkActiveOptions]="{exact : true}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="bg-dark text-light rounded-5" [routerLink]="['/portoflio']" [routerLinkActiveOptions]="{exact : true}"> Portoflio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="bg-dark text-light rounded-5" [routerLink]="['/products']" [routerLinkActiveOptions]="{exact : true}">Product</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="bg-dark text-light rounded-5" [routerLink]="['/products/0/edit']" [routerLinkActiveOptions]="{exact : true}">Add Product</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="bg-dark text-light rounded-5" [routerLink]="['/login']" [routerLinkActiveOptions]="{exact : true}">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="bg-dark text-light rounded-5" [routerLink]="['/home']" (click)="logout()" [routerLinkActiveOptions]="{exact : true}">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

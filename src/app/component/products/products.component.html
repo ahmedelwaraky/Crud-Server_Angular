@@ -1,0 +1,32 @@
+
+<section class=" my-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <table class="table my-5 shadow-lg ">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Product Name </th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantitiy</th>
+                        <th scope="col">Action</th>
+                    </tr> 
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let pro of products">
+                        <th scope="row">{{pro.id}}</th>
+                        <td>{{pro.productName}}</td>
+                        <td>{{pro.price}}</td>
+                        <td>{{pro.quantity}}</td>
+                        <td>
+                            <i [routerLink]="['/products' ,pro.id, 'edit']" class="fa-regular fa-pen-to-square me-2 text-success fs-5"></i>
+                            <i [routerLink]="['/products',pro.id]" class="fa-regular fa-eye me-2 text-warning fs-5" ></i>
+                            <i (click)="deleteItem(pro.id)" class="fa-regular fa-trash-can  text-danger fs-5"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+<app-footer></app-footer>

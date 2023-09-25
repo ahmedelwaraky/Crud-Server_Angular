@@ -1,0 +1,92 @@
+.landing{
+    width: 100%;
+    background-image: url("src\assets\images\slider-01.jpg");
+    height: 100vh;
+    background-size: cover;
+    background-position: center, center;
+    background-attachment: fixed;
+    }
+    .landing .main-landing{
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    }
+    .landing .main-landing h1{
+    font-size:65px;
+    font-weight: 700;
+    line-height: 1.5;
+    }
+    .landing .main-landing h2{
+    font-size:36px;
+    font-weight: 200;
+    }
+    .landing .main-landing h2::before{
+    content: "|";
+    animation-name: typing;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    }
+    @keyframes typing{
+    0% {
+    content: "w | ";
+    }
+    5%{
+    content: "we|";
+    }
+    10% {
+    content: "web|";
+    }
+    15% {
+    content: "web d|";
+    }
+    20% {
+    content: "web de|";
+    }
+    25% {
+    content: "web dev|";
+    }
+    30% {
+    content: "web deve|";
+    }
+    35% {
+    content: "web devel|";
+    }
+    40% {
+    content: "web develo|";
+    }
+    45% {
+    content: "web develop|";
+    }
+    50% {
+    content: "web developer|";
+    }
+    60% {
+    content: "web develop|";
+    }
+    65% {
+    content: "web develo|";
+    }
+    70% {
+    content: "web devel|";
+    }
+    75% {
+    content: "web deve|";
+    }
+    80% {
+    content: "web dev";
+    }
+    85% {
+    content: "web de|";
+    }
+    90% {
+    content: "web|";
+    }
+    95% {
+    content: "we|";
+    }
+    100% {
+    content: "w|";
+    }
+    }
