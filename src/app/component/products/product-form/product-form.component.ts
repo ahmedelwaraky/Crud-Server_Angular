@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouteConfigLoadEnd, Router } from '@angular/router';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ProductService } from 'src/app/services/product.service';
 import { ProductsList } from '../../../models/productsLists';
 import { ProductwithAPIService } from 'src/app/services/productwith-api.service';
@@ -23,9 +23,9 @@ export class ProductFormComponent implements OnInit {
 
   //form group (Reactice forms)
   productForm = new FormGroup({
-    productName: new FormControl(),
-    price: new FormControl(),
-    quantity: new FormControl(),
+    productName: new FormControl([Validators.required , Validators.minLength(3)]),
+    price: new FormControl([Validators.required , Validators.minLength(3)]),
+    quantity: new FormControl([Validators.required , Validators.minLength(3)]),
   });
 
   get getProductName() {
@@ -58,13 +58,13 @@ export class ProductFormComponent implements OnInit {
       });
     } else {
       // add code
-      this.productservice.addNewProduct(this.productForm.value).subscribe();
+      this.productservice.addNewProduct(this.getProductName.value).subscribe();
     }
   }
 
   formOperation(e: Event) {
     e.preventDefault();
-    if (this.productId == 0) {
+    if (this.productId == 0 )  {
       //Add New PRoduct
       this.productservice.addNewProduct(this.productForm.value).subscribe();
     } else {
@@ -74,4 +74,5 @@ export class ProductFormComponent implements OnInit {
     }
     this.router.navigate(['/products']);
   }
+
 }
